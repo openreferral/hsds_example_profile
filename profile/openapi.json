@@ -1,0 +1,13 @@
+{
+  "info": {
+    "title": "HSDS OpenAPI Demo Profile",
+    "version": "3.0",
+    "description": "Demo Profile" ,
+    "contact": null,
+    "summary": null,
+    "license": {
+      "name": "Creative Commons Attribution Share-Alike 4.0 license",
+      "url": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  }
+}

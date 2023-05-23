@@ -1,0 +1,1 @@
+hsds-schema-tools @ git+https://github.com/openreferral/hsds_schema_tools

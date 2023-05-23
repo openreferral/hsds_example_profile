@@ -1,0 +1,9 @@
+{
+   "properties": {
+     "fees": null,
+     "fees_description": null
+   },
+   "allOf": [
+     {"required": ["url"]} 
+   ]
+}
