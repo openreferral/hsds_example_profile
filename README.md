@@ -15,7 +15,7 @@ pip install -r requirements.txt
 
 ## Building schemas, datapackage.json, examples and compiled schemas
 
-You need to define a place where your profile is going to exist on the web.  Most commonly this can be on github, for this repository it would be `https://github.com/openreferral/hsds_example_profile`. So you would run the folling in the root of this repo:
+You need to define a place where your profile is going to exist on the web.  Most commonly this can be on github, for this repository it would be `https://github.com/openreferral/hsds_example_profile`. So you would run the following in the root of this repo:
 
 ```
 hsds_schema.py profile-all https://github.com/openreferral/hsds_example_profile --clean
