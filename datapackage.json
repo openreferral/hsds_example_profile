@@ -261,6 +261,13 @@
             "name": "service",
             "path": "services.csv",
             "description": "The details of the services provided by organizations to a range of different groups.",
+            "allOf": [
+                {
+                    "required": [
+                        "url"
+                    ]
+                }
+            ],
             "format": "csv",
             "mediatype": "text/csv",
             "profile": "tabular-data-resource",
@@ -347,7 +354,7 @@
                         "description": "URL of the service",
                         "format": "uri",
                         "constraints": {
-                            "required": true,
+                            "required": false,
                             "unique": false
                         },
                         "example": "http://example.com/counselling",

@@ -20374,10 +20374,16 @@
   "required": [
     "id",
     "name",
-    "status",
-    "url"
+    "status"
   ],
   "tabular_required": [
     "organization_id"
+  ],
+  "allOf": [
+    {
+      "required": [
+        "url"
+      ]
+    }
   ]
 }

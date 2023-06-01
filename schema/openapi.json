@@ -68,7 +68,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "http://a.com/schema/compiled/service.json"
+                  "$ref": "https://raw.githubusercontent.com/openreferral/hsds_example_profile/main/schema/compiled/service.json"
                 }
               }
             }
@@ -125,7 +125,7 @@
                     "contents": {
                       "type": "array",
                       "items": {
-                        "$ref": "http://a.com/schema/compiled/service_list.json"
+                        "$ref": "https://raw.githubusercontent.com/openreferral/hsds_example_profile/main/schema/compiled/service_list.json"
                       }
                     }
                   },
@@ -163,7 +163,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "http://a.com/schema/taxonomy.json"
+                  "$ref": "https://raw.githubusercontent.com/openreferral/hsds_example_profile/main/schema/taxonomy.json"
                 }
               }
             }
@@ -200,7 +200,7 @@
                     "contents": {
                       "type": "array",
                       "items": {
-                        "$ref": "http://a.com/schema/taxonomy.json"
+                        "$ref": "https://raw.githubusercontent.com/openreferral/hsds_example_profile/main/schema/taxonomy.json"
                       }
                     }
                   },
@@ -238,7 +238,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "http://a.com/schema/taxonomy_term.json"
+                  "$ref": "https://raw.githubusercontent.com/openreferral/hsds_example_profile/main/schema/taxonomy_term.json"
                 }
               }
             }
@@ -296,7 +296,7 @@
                     "contents": {
                       "type": "array",
                       "items": {
-                        "$ref": "http://a.com/schema/taxonomy_term.json"
+                        "$ref": "https://raw.githubusercontent.com/openreferral/hsds_example_profile/main/schema/taxonomy_term.json"
                       }
                     }
                   },
@@ -339,7 +339,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "http://a.com/schema/compiled/organization.json"
+                  "$ref": "https://raw.githubusercontent.com/openreferral/hsds_example_profile/main/schema/compiled/organization.json"
                 }
               }
             }
@@ -383,7 +383,7 @@
                     "contents": {
                       "type": "array",
                       "items": {
-                        "$ref": "http://a.com/schema/compiled/organization_list.json"
+                        "$ref": "https://raw.githubusercontent.com/openreferral/hsds_example_profile/main/schema/compiled/organization_list.json"
                       }
                     }
                   },
@@ -421,7 +421,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "http://a.com/schema/compiled/service.json"
+                  "$ref": "https://raw.githubusercontent.com/openreferral/hsds_example_profile/main/schema/compiled/service.json"
                 }
               }
             }
@@ -480,7 +480,7 @@
                     "contents": {
                       "type": "array",
                       "items": {
-                        "$ref": "http://a.com/schema/compiled/service_at_location_list.json"
+                        "$ref": "https://raw.githubusercontent.com/openreferral/hsds_example_profile/main/schema/compiled/service_at_location_list.json"
                       }
                     }
                   },
