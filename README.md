@@ -119,7 +119,7 @@ The Profiles mechanism works by matching files inside the `profile` directory &m
 
 The task, therefore, is to implement your desired changes in [JSON Schema](http://json-schema.org/) inside a file corresponding to a HSDS schema file. The concept is very similar to overriding or extending a template or a view in web development. You should create a new file for each file in the HSDS Schema that you want to change or override.
 
-You should only created files in `profile` which correspond to the parts of the HSDS schema that you want to change. You do *not* need to include files which you want to keep the same in your profile. For example if your profile only changes the `Service` object, then you only need to create `service.json` and not `organization.json` etc.
+You should only create files in `profile` which correspond to the parts of the HSDS schema that you want to change. You do *not* need to include files which you want to keep the same in your profile. For example if your profile only changes the `Service` object, then you only need to create `service.json` and not `organization.json` etc.
 
 Similarly, you should NOT copy the entire schema file from HSDS and make changes. *Only write in the changes you need*. For example if you were adding a new property `myNewProperty` to `Service`, you would do the following inside `profile/service.json`:
 
@@ -135,7 +135,7 @@ Similarly, you should NOT copy the entire schema file from HSDS and make changes
 }
 ```
 
-The reason for this is to ensure that your Profile is only changing the parts of the schema file that you need to change and thereby avoiding any accidents. It also keeps things nice and readable for you (and others!) to maintain your Profile. The JSON Merge Patch algorithm will take care of ensuring that your changes are made to the appropriate parts of the schema file.
+The reason for this is to ensure that your Profile is only changing the parts of the schema file that you need to change and thereby avoid any accidents. It also keeps things nice and readable for you (and others!) to maintain your Profile. The JSON Merge Patch algorithm will take care of ensuring that your changes are made to the appropriate parts of the schema file.
 
 You can also remove parts of the HSDS schema through the `null` keyword. For example if you wanted to remove `fees` and `fees_description` from `Service` you would include the following in your `profile/service.json`:
 
@@ -156,7 +156,7 @@ null
 
 Using the same techniques, you can also define changes to the HSDS OpenAPI Specification. Create the `openapi.json` file and make changes. This file is NOT in JSON Schema format, but is a JSON file specifying the HSDS API specification in accordance with [OpenAPI](https://spec.openapis.org/oas/latest.html#versions). You should familiarise yourself with this if you want to make changes to this file.
 
-Finally, you can also define some default data inside of a `profile/data` directory. For each type of default data you want, create a file inside of this directory with a name corresponding to the schema file. The file should then include a JSON-formatted array where each of the items is conformant to the schema associated with it. For example if you wanted to define some Taxonomy Terms for use with your profile, you should create the file `profile/data/taxonomy_term.json`. This file would then contain a JSON array of `taxonomy_term` items, where each one represents a term in your taxonomy.
+Finally, you can also define some default data inside of a `profile/data` directory. For each type of default data you want, create a file inside of this directory with a name corresponding to the schema file. The file should then include a JSON-formatted array where each of the items is conformant to the schema associated with it. For example if you wanted to define some Taxonomy Terms for use with your profile, you should create the file `profile/data/taxonomy_term.json`. This file would then contain a JSON array of [taxonomy_term](http://docs.openreferral.org/en/latest/hsds/schema_reference.html#taxonomy-term) items, where each one represents a term in your taxonomy.
 
 #### Things you probably want to remove from this Example Profile
 
@@ -292,7 +292,7 @@ First, we create the `profile/openapi.json` file to contain our changes. This ma
 
 In our hypothetical scenario we need to provide a new endpoint to quickly support exhanging data about organizations operating at particular locations.
 
-Inside `profile/openapi.json` we add the endpoint with the parameter details:
+Inside `profile/openapi.json` we add the endpoint with the parameter and response details as follows:
 
 ```json
 {
@@ -348,7 +348,7 @@ Inside `profile/openapi.json` we add the endpoint with the parameter details:
 
 In this example we add a new path which provides a GET request API endpoint. For illustrative purposes, we then define two different ways of attaching parameters to this new API endpoint.
 
-Firstly, we provide a `search` parameter. This is re-used across a lot of the endpoints defined in the core HSDS API specification, so its details are actually stored in a `components` array elsewhere in the `openapi.json` file and can simply be referenced and re-used. You can find a list of the parameters starting [here](https://github.com/openreferral/specification/blob/3.0/schema/openapi.json#L542).
+Firstly, we provide a `search` parameter. This is re-used across a lot of the endpoints defined in the core HSDS API specification, so its details are actually stored in a `components` array elsewhere in the `openapi.json` file and can simply be referenced and re-used. You can find a list of the parameters in the `components` array starting [here](https://github.com/openreferral/specification/blob/3.0/schema/openapi.json#L542).
 
 Secondly, we define a new parameter which is not already in the components list: `location_id`. This corresponds to the `id` property on the [location object](http://docs.openreferral.org/en/latest/hsds/schema_reference.html#location) as defined in HSDS. The parameter is defined via a [OpenAPI parameter object](https://spec.openapis.org/oas/latest.html#parameter-object).
 
