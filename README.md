@@ -108,7 +108,7 @@ While the tutorials and examples in this repository aim to be clear and explain 
 
 Specific versions:
 
-* HSDS 3.0 is implemented in [JSON Schema Draft 2020-12](http://json-schema.org/specification-links.html#2020-12). This was the latest version available during implementation. You do not need to declare a JSON Schema version in your Profile schema files, but you should take care not to use features that are only available in later versions of JSON Schema and be careful when using features which have a different behaviour in previous versions.
+* HSDS 3.0 is implemented in [JSON Schema Draft 2020-12](http://json-schema.org/specification-links.html#2020-12). This was the latest version available during implementation. You do not need to declare a JSON Schema version in your Profile schema files, but you should take care not to use features that are only available in later versions of JSON Schema and be careful when using features that have a different behaviour in previous versions.
 * The HSDS OpenAPI specification file is implemented in [OpenAPI version 3.1.0](https://spec.openapis.org/oas/latest.html), which was the latest version available during implementation. You should therefore ensure that any features you add to your Profile's `openapi.json` file are available in this version.
 
 ### Defining changes
@@ -119,9 +119,9 @@ The Profiles mechanism works by matching files inside the `profile` directory &m
 
 The task, therefore, is to implement your desired changes in [JSON Schema](http://json-schema.org/) inside a file corresponding to a HSDS schema file. The concept is very similar to overriding or extending a template or a view in web development. You should create a new file for each file in the HSDS Schema that you want to change or override.
 
-You should only create files in `profile` which correspond to the parts of the HSDS schema that you want to change. You do *not* need to include files which you want to keep the same in your profile. For example if your profile only changes the `Service` object, then you only need to create `service.json` and not `organization.json` etc.
+You should only create files in `profile` which correspond to the parts of the HSDS schema that you want to change. You do *not* need to include files which you want to keep the same in your profile. For example, if your profile only changes the `Service` object, then you only need to create `service.json` and not `organization.json` etc.
 
-Similarly, you should NOT copy the entire schema file from HSDS and make changes. *Only write in the changes you need*. For example if you were adding a new property `myNewProperty` to `Service`, you would do the following inside `profile/service.json`:
+Similarly, you should NOT copy the entire schema file from HSDS and make changes. *Only write in the changes you need*. For example, if you were adding a new property `myNewProperty` to `Service`, you would do the following inside `profile/service.json`:
 
 ```json
 {
@@ -137,7 +137,7 @@ Similarly, you should NOT copy the entire schema file from HSDS and make changes
 
 The reason for this is to ensure that your Profile is only changing the parts of the schema file that you need to change and thereby avoid any accidents. It also keeps things nice and readable for you (and others!) to maintain your Profile. The JSON Merge Patch algorithm will take care of ensuring that your changes are made to the appropriate parts of the schema file.
 
-You can also remove parts of the HSDS schema through the `null` keyword. For example if you wanted to remove `fees` and `fees_description` from `Service` you would include the following in your `profile/service.json`:
+You can also remove parts of the HSDS schema through the `null` keyword. For example, if you wanted to remove `fees` and `fees_description` from `Service` you would include the following in your `profile/service.json`:
 
 ```json
 {
@@ -156,11 +156,11 @@ null
 
 Using the same techniques, you can also define changes to the HSDS OpenAPI Specification. Create the `openapi.json` file and make changes. This file is NOT in JSON Schema format, but is a JSON file specifying the HSDS API specification in accordance with [OpenAPI](https://spec.openapis.org/oas/latest.html#versions). You should familiarise yourself with this if you want to make changes to this file.
 
-Finally, you can also define some default data inside of a `profile/data` directory. For each type of default data you want, create a file inside of this directory with a name corresponding to the schema file. The file should then include a JSON-formatted array where each of the items is conformant to the schema associated with it. For example if you wanted to define some Taxonomy Terms for use with your profile, you should create the file `profile/data/taxonomy_term.json`. This file would then contain a JSON array of [taxonomy_term](http://docs.openreferral.org/en/latest/hsds/schema_reference.html#taxonomy-term) items, where each one represents a term in your taxonomy.
+Finally, you can also define some default data inside of a `profile/data` directory. For each type of default data you want, create a file inside of this directory with a name corresponding to the schema file. The file should then include a JSON-formatted array where each of the items is conformant to the schema associated with it. For example, if you wanted to define some Taxonomy Terms for use with your profile, you should create the file `profile/data/taxonomy_term.json`. This file would then contain a JSON array of [taxonomy_term](http://docs.openreferral.org/en/latest/hsds/schema_reference.html#taxonomy-term) items, where each one represents a term in your taxonomy.
 
 #### Things you probably want to remove from this Example Profile
 
-This Example Profile defines some changes to files to get you started and illustrate how to create some common changes.
+This Example Profile defines some changes to files to get you started and illustrates how to create some common changes.
 
 You should be aware of these changes so that you don't make an unintentional change to the schema in your Profile. You likely want to remove or edit them explicitly:
 
@@ -171,7 +171,7 @@ You should be aware of these changes so that you don't make an unintentional cha
 
 #### Some notes on style and naming conventions
 
-You are permitted to implement your Profile using whatever style and naming conventions you desire, however you should consider existing HSDS 3.0 conventions to ensure that your Profile is not jarring to use or causes confusion for users.
+You are permitted to implement your Profile using whatever style and naming conventions you desire, however, you should consider existing HSDS 3.0 conventions to ensure that your Profile is not jarring to use or causes confusion for users.
 
 * Properties names should be in English `en`.
 * Property names should be in `lower_case_with_underscores`.
@@ -209,7 +209,7 @@ We recommend that HSDS Profile documentation should contain at least the followi
 
 * An overview of the Profile, its intended use-cases and audience or who may find useful
 * A schema reference page containing details of each schema. This should stand on its own ie containing information about the full Profile schema once it has been merged with the HSDS Schema, not just your changes
-* An API reference page with a similar scope to above. If your Profile does not make changes to the existing HSDS API Specification, then you should explicitly state this and link to the [HSDS API Reference](http://docs.openreferral.org/en/latest/hsds/api_reference.html) as the SSOT.
+* An API reference page with a similar scope to the above. If your Profile does not make changes to the existing HSDS API Specification, then you should explicitly state this and link to the [HSDS API Reference](http://docs.openreferral.org/en/latest/hsds/api_reference.html) as the SSOT.
 * A summary of changes which your Profile makes. This can be structured however best suits your Profile and audience, but you should be clear and explicit with regards to:
   * new properties in your Profile which are not in HSDS
   * properties which your Profile removes from HSDS
@@ -247,7 +247,7 @@ Inside `profile/service.json` we simply want to add to the list of properties, a
 }
 ```
 
-This simply adds a new property `last_inspected` which is of a type `string` (since JSON doesn't have a built in Date or DateTime type) but establishes that the value must be of the format `date`. Please consult the [Understanding JSON Schema](https://json-schema.org/understanding-json-schema/index.html) reference for more details on JSON Schema, if you want to add more complex properties such as those matching patterns, or entire objects.
+This simply adds a new property `last_inspected` which is of a type `string` (since JSON doesn't have a built-in Date or DateTime type) but establishes that the value must be of the format `date`. Please consult the [Understanding JSON Schema](https://json-schema.org/understanding-json-schema/index.html) reference for more details on JSON Schema, if you want to add more complex properties such as those matching patterns, or entire objects.
 
 ### Make existing or new properties required
 
@@ -282,15 +282,15 @@ Inside `profile/service.json`:
 }
 ```
 
-The `allOf` keyword sits outside of the `properties` key in the schema, because each schema has `properties` as well a separate `required` array at the same level.
+The `allOf` keyword sits outside of the `properties` key in the schema, because each schema has `properties` as well as a separate `required` array at the same level.
 
 ### Adding a new API Endpoint
 
-Another common task of a Profile is to make changes to the HSDS OpenAPI specification. In this case we'll be defining a new endpoint in the API. Please ensure you're up to speed on the [OpenAPI Specification](https://spec.openapis.org/oas/latest.html) when making such changes yourself.
+Another common task of a Profile is to make changes to the HSDS OpenAPI specification. In this case, we'll be defining a new endpoint in the API. Please ensure you're up to speed on the [OpenAPI Specification](https://spec.openapis.org/oas/latest.html) when making such changes yourself.
 
 First, we create the `profile/openapi.json` file to contain our changes. This matches the name of the [openapi.json file](https://github.com/openreferral/specification/blob/3.0/schema/openapi.json) in HSDS
 
-In our hypothetical scenario we need to provide a new endpoint to quickly support exhanging data about organizations operating at particular locations.
+In our hypothetical scenario, we need to provide a new endpoint to quickly support exchanging data about organizations operating at particular locations.
 
 Inside `profile/openapi.json` we add the endpoint with the parameter and response details as follows:
 
@@ -346,13 +346,13 @@ Inside `profile/openapi.json` we add the endpoint with the parameter and respons
 }
 ```
 
-In this example we add a new path which provides a GET request API endpoint. For illustrative purposes, we then define two different ways of attaching parameters to this new API endpoint.
+In this example, we add a new path which provides a GET request API endpoint. For illustrative purposes, we then define two different ways of attaching parameters to this new API endpoint.
 
 Firstly, we provide a `search` parameter. This is re-used across a lot of the endpoints defined in the core HSDS API specification, so its details are actually stored in a `components` array elsewhere in the `openapi.json` file and can simply be referenced and re-used. You can find a list of the parameters in the `components` array starting [here](https://github.com/openreferral/specification/blob/3.0/schema/openapi.json#L542).
 
 Secondly, we define a new parameter which is not already in the components list: `location_id`. This corresponds to the `id` property on the [location object](http://docs.openreferral.org/en/latest/hsds/schema_reference.html#location) as defined in HSDS. The parameter is defined via a [OpenAPI parameter object](https://spec.openapis.org/oas/latest.html#parameter-object).
 
-Next we define the `responses` for this request. We provide a response for `200`, which is a succesful response and the most useful for us to define explicitly. This should be an [OpenAPI Responses object](https://spec.openapis.org/oas/latest.html#responsesObject). In our case, we are returning some JSON and actually defining a mini JSON-schema in the `schema` key, which should be used to validate the response body. Our schema is simply an array which matches the `Page` component (to enable Pagination) AND the `items` in the array reference the compiled HSDS schema for the [Organization object](http://docs.openreferral.org/en/latest/hsds/schema_reference.html#organization). If you have made changes to the `Organization` object in your Profile, you should replace this URI with a reference to the compiled schema of your Profile's `organization.json` file.
+Next, we define the `responses` for this request. We provide a response for `200`, which is a successful response and the most useful for us to define explicitly. This should be an [OpenAPI Responses object](https://spec.openapis.org/oas/latest.html#responsesObject). In our case, we are returning some JSON and actually defining a mini JSON-schema in the `schema` key, which should be used to validate the response body. Our schema is simply an array which matches the `Page` component (to enable Pagination) AND the `items` in the array reference the compiled HSDS schema for the [Organization object](http://docs.openreferral.org/en/latest/hsds/schema_reference.html#organization). If you have made changes to the `Organization` object in your Profile, you should replace this URI with a reference to the compiled schema of your Profile's `organization.json` file.
 
 **An alternative method &ndash; editing the /organizations endpoint**
 
@@ -392,7 +392,7 @@ This should add the `location_id` parameter from the previous example as a param
 
 You may want to remove some property from a schema (aka object or table). There can be many reasons for this, such as it not being relevant or possibly confusing for your use-case.
 
-In this example we'll be removing the `wait_time` and `fees` properties from the [Service schema](http://docs.openreferral.org/en/latest/hsds/schema_reference.html#service). These properties are deprecated in HSDS 3.0, so people should be transitioning away from using them anyway.
+In this example, we'll be removing the `wait_time` and `fees` properties from the [Service schema](http://docs.openreferral.org/en/latest/hsds/schema_reference.html#service). These properties are deprecated in HSDS 3.0, so people should be transitioning away from using them anyway.
 
 Since we're overriding the Service schema, we need to create `profile/service.json` if we haven't already. This matches the name of the [service.json schema file](https://github.com/openreferral/specification/blob/3.0/schema/service.json) in HSDS.
 
@@ -415,7 +415,7 @@ Now we can run the HSDS Schema tools command to generate our Profile schemas and
 
 There may be cases where you want to remove an entire schema (object or table) from your Profile. HSDS is a permissive schema which allows people to publish additional properties not in the standard, so this will not prevent people from publishing data matching the schema or object you've removed. However, validation tools should not validate these because from the perspective of your Profile they are now additional properties rather than properties defined in your Profile.
 
-Removing a schema works by using the `null` keyword to override the entire schema file. In this example we're going to remove the [required_document](http://docs.openreferral.org/en/latest/hsds/schema_reference.html#required-document) schema.
+Removing a schema works by using the `null` keyword to override the entire schema file. In this example, we're going to remove the [required_document](http://docs.openreferral.org/en/latest/hsds/schema_reference.html#required-document) schema.
 
 Since we need to remove the entire schema file, we should create the file `profile/required_document.json`, which corresponds to the [required_document.json](https://github.com/openreferral/specification/blob/3.0/schema/required_document.json) file in the HSDS schema.
 
