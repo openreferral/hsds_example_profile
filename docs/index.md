@@ -15,7 +15,7 @@ Contents:
 
    schema_reference
    api_reference
-   hsds/logical_model
+   logical_model
 
 ```
 
