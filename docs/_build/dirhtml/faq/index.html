@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frequently Asked Questions &mdash; Open Referral Data Specifications 3.0.1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" type="text/css" />
+      <link rel="stylesheet" href="https://media.readthedocs.org/css/sphinx_rtd_theme.css" type="text/css" />
+      <link rel="stylesheet" href="https://media.readthedocs.org/css/readthedocs-doc-embed.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/jsonschema.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/renderjson.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/design-tabs.js"></script>
+        <script src="../_static/custom.js"></script>
+        <script src="../_static/renderjson.js"></script>
+        <script src="../_static/json-example-format.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="Credits" href="../credits/" />
+    <link rel="prev" title="Design Principles" href="../design_principles/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Open Referral Data Specifications
+          </a>
+              <div class="version">
+                3.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Human Services Data Spec</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../hsds/about/">About HSDS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hsds/schema_reference/">Schema Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hsds/api_reference/">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hsds/logical_model/">Logical Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hsds/uk_compliance/">UK Compliance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hsds/changelog/">Changelog</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">HSDS Implementation Guidance</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../hsds/use_cases/">Use Cases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hsds/schedules/">Schedules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hsds/classifications/">Classifications, Attributes &amp; Taxonomies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hsds/identifiers/">Identifiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hsds/producing_sharing/">Publication Guidance</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Open Referral Initiative</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../initiative/">Project Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../design_principles/">Design Principles</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Frequently Asked Questions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-open-referral">What is Open Referral?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#who-started-open-referral">Who started Open Referral?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#who-is-the-audience-for-open-referral-who-benefits">Who is the audience for Open Referral? Who benefits?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-is-this-project-relevant-to-me">How is this project relevant to me?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#if-i-maintain-a-community-resource-directory-or-if-i-partner-with-an-organization-that-does-how-would-i-get-started">If I maintain a community resource directory — or if I partner with an organization that does — how would I get started?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-are-decisions-made-about-the-open-referral-specifications">How are decisions made about the Open Referral specifications?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-the-human-services-data-specification-hsds">What is the Human Services Data Specification (HSDS)?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-in-the-human-services-data-specification-hsds">What is in the Human Services Data Specification (HSDS)?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-not-in-the-human-services-data-specification-hsds">What is not in the Human Services Data Specification (HSDS)?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-the-format-of-the-hsds-why-json">What is the format of the HSDS? Why JSON?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-do-you-address-the-matter-of-taxonomy-of-types-of-services-and-situations">How do you address the matter of taxonomy (of types of services and situations)?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-does-open-referral-handle-eligibility-criteria">How does Open Referral handle eligibility criteria?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-if-i-collect-important-information-that-isn-t-included-in-the-human-service-data-specification">What if I collect important information that isn’t included in the Human Service Data specification?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-if-the-human-service-data-specification-requires-kinds-of-information-that-i-don-t-collect">What if the Human Service Data Specification requires kinds of information that I don’t collect?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-if-i-need-help-collecting-this-data-in-the-first-place">What if I need help collecting this data in the first place?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#who-has-adapted-this-project-and-can-i-see-examples">Who has adapted this project and can I see examples?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#who-do-i-contact-if-i-need-help-with-this-project">Who do I contact if I need help with this project?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-languages-is-this-project-in">What languages is this project in?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#is-the-project-in-active-development">Is the project in active development?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-the-licensing-on-this-project">What is the licensing on this project?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#notes">Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../credits/">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../privacy-notice/">Privacy Notice</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Open Referral Data Specifications</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Frequently Asked Questions</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/faq.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="frequently-asked-questions">
+<h1>Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permalink to this headline"></a></h1>
+<p>This FAQ provides context for the Open Referral Initiative and its Human Services Data Specification (HSDS). You can read more about Open Referral at <a class="reference external" href="https://openreferral.org">https://openreferral.org</a></p>
+<section id="what-is-open-referral">
+<h2>What is Open Referral?<a class="headerlink" href="#what-is-open-referral" title="Permalink to this headline"></a></h2>
+<p>The Open Referral Initiative is a network of people and organizations working to promote the accessibility of information about health, human, and social services — i.e. <em>community resource directory data</em>.</p>
+<p>Our Human Service Data Specification (HSDS, AKA ‘the Open Referral format’) is a data exchange format that enables resource directory data to be shared among heterogeneous information systems.</p>
+<p>Open Referral’s ecosystem includes a range of open source tools and web applications that facilitate the flow of resource directory information. See <a class="reference external" href="https://openreferral.org/about/technology-overview/">examples of these tools and apps here</a>.</p>
+<p>More tools are in development by members of Open Referral’s network, members of which are primarily assembled in <a class="reference external" href="https://groups.google.com/forum/#!forum/openreferral">our Google Group</a> and <a class="reference external" href="https://openreferral.org/get-involved/join-our-slack-team/">our Slack team</a>.</p>
+</section>
+<section id="who-started-open-referral">
+<h2>Who started Open Referral?<a class="headerlink" href="#who-started-open-referral" title="Permalink to this headline"></a></h2>
+<p>Greg Bloom is the instigator and lead organizer of Open Referral, which emerged from work done in the DC Open211 project, and which was first described <a class="reference external" href="http://http//beyondtransparency.org/chapters/part-5/towards-a-community-data-commons/">Towards a Community Data Commons</a>, an essay published in Code for America’s 2013 book <em>Beyond Transparency</em>.</p>
+<p>Our work was initially co-sponsored by <a class="reference external" href="https://www.codeforamerica.org/blog/2014/08/05/open-referral-initiative-a-standard-for-the-safety-net/">Code for America</a> and the Ohana Project, with funding from the Knight Foundation.</p>
+</section>
+<section id="who-is-the-audience-for-open-referral-who-benefits">
+<h2>Who is the audience for Open Referral? Who benefits?<a class="headerlink" href="#who-is-the-audience-for-open-referral-who-benefits" title="Permalink to this headline"></a></h2>
+<p>There are three types of <em>ultimate</em> stakeholders for Open Referral: 1) people in need of help of some kind (<em>‘help-seekers’</em>); 2) people who are in some kind of position to assist such help-seekers (<em>‘service providers’</em>); and 3) <em>‘analysts’</em> — i.e. researchers, policymakers, funders and anyone seeking to understand the patterns of resource allocation in their community.</p>
+<p>The <em>primary</em> users of Open Referral are <em>database administrators –</em> anyone involved in aggregating, maintaining, and/or developing systems that produce or consume community resource directory data. Our objective is to help such database administrators share higher quality resource directory data at lower cost, with the goal of making it easier for people to find such information across a wide array of channels.</p>
+<p>Read more about each of these types of users <a class="reference internal" href="../initiative/#types-of-use-and-user-personas"><span class="std std-doc">here in our User Personas documentation</span></a>.</p>
+</section>
+<section id="how-is-this-project-relevant-to-me">
+<h2>How is this project relevant to me?<a class="headerlink" href="#how-is-this-project-relevant-to-me" title="Permalink to this headline"></a></h2>
+<p>Open Referral helps people and organizations grapple with the complex problem of maintaining and publishing reliable information about the health, human, and social services available to people in need.</p>
+<p>Most of our work does not involve writing code. We facilitate collaborative action among institutions that have mutual interest in cooperation.</p>
+<p>That said, Open Referral is an open network. Anyone is free to use our data specification and tools in pursuit of our shared goals.</p>
+<p>If you have resource directory data that you wish to make more available — or if there’s an organization in your community that might make its data more broadly accessible, then you could get to work right away.</p>
+<p>Read more in our Contributors Guide. Reach out to info&#64;openreferral.org to get directly in touch.</p>
+</section>
+<section id="if-i-maintain-a-community-resource-directory-or-if-i-partner-with-an-organization-that-does-how-would-i-get-started">
+<h2>If I maintain a community resource directory — or if I partner with an organization that does — how would I get started?<a class="headerlink" href="#if-i-maintain-a-community-resource-directory-or-if-i-partner-with-an-organization-that-does-how-would-i-get-started" title="Permalink to this headline"></a></h2>
+<p>You can start by testing the viability of our format for your context. That may entail <a class="reference internal" href="../hsds/schema_reference/"><span class="doc std std-doc">mapping your database’s schema to the Human Services Data Specification</span></a>.</p>
+<p>Once you’ve mapped your schema to ours, analyze the gaps. (You can ask questions or submit suggestions for improvements to our schema in <a class="reference external" href="https://github.com/openreferral/specification/issues">our Issues Queue</a>. Read more in <a class="reference external" href="https://github.com/openreferral/specification/blob/master/CONTRIBUTING.md">our Contributors Guide</a>.)</p>
+<p>Then you can write a script to transform your data into this open format.</p>
+<p>Finally, you can deploy an open source resource database (like <a class="reference external" href="https://sarapis.org/human-services/orservices/">ORServices</a>), load your transformed data in, and start building new tools that can help people in your community use this data in new ways.</p>
+<p>If you have questions about how this might be useful in your community, please reach out to info&#64;openreferral.org</p>
+</section>
+<section id="how-are-decisions-made-about-the-open-referral-specifications">
+<h2>How are decisions made about the Open Referral specifications?<a class="headerlink" href="#how-are-decisions-made-about-the-open-referral-specifications" title="Permalink to this headline"></a></h2>
+<p>Our governance model is structured around three activities: 1) a semi-regular Assembly video call, open to all participants [see an archive of these videos <a class="reference external" href="https://www.youtube.com/channel/UCtbojLVi_ti_MWyGD2-AM4A">here</a>], 2) convenings of diverse stakeholders in Open Referral workshops [read the reportback <a class="reference external" href="https://docs.google.com/document/d/1kivG6TTw1LKhJRAQHeqH7fTIxZZaDojXRRBYEd_ltWw/edit">here</a>], and 3) ad hoc ‘workgroups’ consisting of leaders with a varied set of perspectives and experiences [see the workgroup archive <a class="reference external" href="http://groups.google.com/forum/#!forum/openreferral-workgroup">here</a>].</p>
+<p>Of all the feedback received from many different contributors, we assign priority to the perspectives of the lead stakeholders of our pilot projects. This feedback is submitted to Open Referral’s deputized technical leads, who ultimately make decisions with documentation and established methods for future review.</p>
+<p>[Open Referral’s initial governance model is <a class="reference external" href="https://docs.google.com/document/d/16sZXY6nQZJqq-TJaaLY2K3pE2G__q1myYX8JC3ZKHmk/edit">described in more detail in this memo</a>. You can also read more about the nature of this ‘polycentric’ approach to governance in <a class="reference external" href="http://openreferral.org/toward-seamless-information-referral-polycentric-experiment/">Derek Coursen’s blog post here</a>.]</p>
+</section>
+<section id="what-is-the-human-services-data-specification-hsds">
+<h2>What is the Human Services Data Specification (HSDS)?<a class="headerlink" href="#what-is-the-human-services-data-specification-hsds" title="Permalink to this headline"></a></h2>
+<p>AKA ‘the Open Referral format,’ the HSDS is a data interchange format that enables resource directory data to be published in bulk for use by many systems. HSDS provides a common vocabulary for information about services, the organizations that provide them, and the locations where they can be accessed. HSDS is essentially an <em>interlingua</em> — in other words, it’s a common language that can be used by anyone to enable community resource directories to ’talk’ to each other. [<a class="reference external" href="https://github.com/OpenReferral/specification">See the data specification in Github</a> or on <a class="reference external" href="https://openreferral.readthedocs.io/">our Documentation Site</a>.]</p>
+</section>
+<section id="what-is-in-the-human-services-data-specification-hsds">
+<h2>What is in the Human Services Data Specification (HSDS)?<a class="headerlink" href="#what-is-in-the-human-services-data-specification-hsds" title="Permalink to this headline"></a></h2>
+<p>First, HSDS identifies a vocabulary of terms that describe what a service is, the institution that provides it, where the service can be accessed, and how to access it. These terms are designated as ‘required’ (meaning they must be included for data to be compliant) or ‘optional.’ The spec provides instructions for formatting these terms, with examples.</p>
+<p>On a more technical level, HSDS also includes a <a class="reference internal" href="../hsds/logical_model/"><span class="doc std std-doc">logical model</span></a> that diagrams the relationships between these terms.</p>
+<p>Finally, HSDS provides guidance for structuring and packaging data so that it can be published on the web and/or exchanged between systems (see: <a class="reference external" href="https://github.com/codeforamerica/openreferral/specification">Github</a> or our <a class="reference external" href="https://openreferral.readthedocs.io/">documentation site</a>).</p>
+</section>
+<section id="what-is-not-in-the-human-services-data-specification-hsds">
+<h2>What is not in the Human Services Data Specification (HSDS)?<a class="headerlink" href="#what-is-not-in-the-human-services-data-specification-hsds" title="Permalink to this headline"></a></h2>
+<p>HSDS does not attempt to describe every type of information that might be relevant to people working with resource directory data. We have attempted to maintain a strict focus on specifying only relevant factual attributes that are shared by <em>most</em> services. That means we excluded many kinds of information that are unique to specific kinds of services (such as the accreditation of child care providers, or the availability of beds in a shelter).</p>
+<p>HSDS also does not specify a taxonomy of types of services and types of personal attributes that determine eligibility for various types of services. Many such taxonomies already exist, so HSDS merely provides instructions for how to overlay a taxonomy of the user’s choosing. By default, information systems that use HSDS can use the open source <a class="reference external" href="http://openeligibility.org/">Open Eligibility taxonomy</a>. (Expect future cycles of the Open Referral initiative to take on these issues more directly; however, for now we are merely looking to learn from the different ways in which various users address these common problems.)</p>
+<p>Finally, HSDS does not specify any information regarding how referrals actually get made (i.e. setting appointments, following up, etc) or feedback regarding the quality of those services. These kinds of information are critically important, but inherently so variable and context-dependent that we don’t think it’s feasible or appropriate to specify them at this point in time.</p>
+<p>That said, this model can and should be extended! Users can expand HSDS to meet their own needs, in their own systems. Groups of stakeholders from particular subdomains can develop extended ‘profiles’ that are tailored to their situation. (<a class="reference external" href="https://groups.google.com/forum/#!forum/legalaid-openreferral">A group of civil legal service providers</a> have already begun working on precisely that.) In future iterations of the Open Referral process, these expansions will then be considered for inclusion as part of the primary model.</p>
+</section>
+<section id="what-is-the-format-of-the-hsds-why-json">
+<h2>What is the format of the HSDS? Why JSON?<a class="headerlink" href="#what-is-the-format-of-the-hsds-why-json" title="Permalink to this headline"></a></h2>
+<p>Version 3.0 of HSDS has established JSON as the primary standard format. (The initial versions of HSDS used the CSV format, with multiple tables wrapped by a JSON datapackage.) This change brings many benefits to the standard, which are detailed here alongside a discussion of risks and mitigations of those risks.</p>
+<p>The decision to change the primary format to JSON was the result of an involved, participatory, and collaborative decision making process which took place over several months and involved a working group made up of key stakeholders across the Open Referral community.</p>
+<p>As outlined in the document linked above, a range of reasons motivated this change. First and most generally, JSON Schema is a vastly more common format than datapackages – familiar for both interchange and validation – so we can benefit from a much greater range of tooling and expertise to make HSDS better to use in almost all aspects.</p>
+<p>More specifically, JSON schema also improves our ability to:</p>
+<p>Enable users to query an HSDS data source to find a service and act on the information:</p>
+<ul class="simple">
+<li><p>We can standardise the output of APIs to the new JSON format and we can develop API specifications around them; meaning they will be kept in sync with the core HSDS specification.</p></li>
+<li><p>It is not really possible to do these queries in just the Tabular Datapackage format.</p></li>
+</ul>
+<p>Align multiple datasets: to enable resource data federation, matching/synthesizing/syncing multiple sources of HSDS:</p>
+<ul class="simple">
+<li><p>Having JSON output formats that align across publishers can make data federation/syncing feasible.</p></li>
+<li><p>Easier to write extension/profiling tooling for JSON Schema as some already exist.</p></li>
+<li><p>The JSON outputs could not just be through APIs, but also with bulk JSON versions, making federation/syncing feasible outside API use.</p></li>
+<li><p>This is tricky to do if only the Tabular Datapackage format was allowed, as federation/syncing relational database structures, with different schemas, has no feasible automated solutions.</p></li>
+</ul>
+<p>Analyze and improve resource data quality:</p>
+<ul class="simple">
+<li><p>JSON Schema can provide clear validation results.</p></li>
+<li><p>JSON has readily available tooling for building validators and offering additional checks beyond basic validation rules.</p></li>
+<li><p>Reliable tooling available for generating documentation.</p></li>
+</ul>
+<p>Edit individual records:</p>
+<ul class="simple">
+<li><p>When updated using JSON representations a single API endpoint can be used to update a service and all related fields; not just a table at a time.</p></li>
+</ul>
+<p>The outdated HSDS representation format of JSON Tables bundling CSV files is an important artefact for many HSDS users, and so will be maintained: we automatically generate a JSON Table Schema from a JSON Schema, so we expect that the shift will not cause any issues for any implementations that expect the datapackage from deprecated HSDS versions.</p>
+</section>
+<section id="how-do-you-address-the-matter-of-taxonomy-of-types-of-services-and-situations">
+<h2>How do you address the matter of taxonomy (of types of services and situations)?<a class="headerlink" href="#how-do-you-address-the-matter-of-taxonomy-of-types-of-services-and-situations" title="Permalink to this headline"></a></h2>
+<p>Open Referral recognizes the existence of a diverse array of taxonomies to describe types of services, organizations, and people for whom services are available. Given that such categories are inherently subjective, whereas Open Referral’s format is describing only factual data, we do not prescribe a specific taxonomy. We do <a class="reference external" href="https://github.com/openreferral/specification/blob/master/docs/design_principles.md#related-taxonomies">recognize the existence of an array of taxonomies currently in use</a>, and our HSDS format <a class="reference internal" href="../hsds/classifications/"><span class="doc std std-doc">includes specifications for including any taxonomy in open data</span></a>.</p>
+</section>
+<section id="how-does-open-referral-handle-eligibility-criteria">
+<h2>How does Open Referral handle eligibility criteria?<a class="headerlink" href="#how-does-open-referral-handle-eligibility-criteria" title="Permalink to this headline"></a></h2>
+<p>Good question. We don’t currently specify a standardized method for structuring eligibility criteria. The kinds of eligibility rules are so variable and often complex and nuanced that we have not tried to develop a standardized set of them. By default, information systems that use HSDS can use the open source <a class="reference external" href="http://openeligibility.org/">Open Eligibility taxonomy</a>. (Expect future cycles of the Open Referral initiative to take on these issues more directly; however, for now we are merely looking to learn from the different ways in which various users address these common problems.)</p>
+</section>
+<section id="what-if-i-collect-important-information-that-isn-t-included-in-the-human-service-data-specification">
+<h2>What if I collect important information that isn’t included in the Human Service Data specification?<a class="headerlink" href="#what-if-i-collect-important-information-that-isn-t-included-in-the-human-service-data-specification" title="Permalink to this headline"></a></h2>
+<p>That’s ok! The Human Services Data Specification is an extensible format to which additional layers of information can be added — <span class="xref myst">see guidance here</span>. (But we’d like to learn from your experience, so please share these insights!)</p>
+</section>
+<section id="what-if-the-human-service-data-specification-requires-kinds-of-information-that-i-don-t-collect">
+<h2>What if the Human Service Data Specification requires kinds of information that I don’t collect?<a class="headerlink" href="#what-if-the-human-service-data-specification-requires-kinds-of-information-that-i-don-t-collect" title="Permalink to this headline"></a></h2>
+<p>The Open Referral format has been developed to require a pretty minimal set of information. If your resource directory doesn’t contain certain required elements, we may need to get creative. Ask in <a class="reference external" href="https://github.com/openreferral/specification/issues">our Issues queue</a> for clarification and context, and we’ll try to answer you promptly.</p>
+</section>
+<section id="what-if-i-need-help-collecting-this-data-in-the-first-place">
+<h2>What if I need help collecting this data in the first place?<a class="headerlink" href="#what-if-i-need-help-collecting-this-data-in-the-first-place" title="Permalink to this headline"></a></h2>
+<p>Open Referral is working to build tools that can help people produce and verify accurate resource directory data. For the most part, we don’t host these tools ourselves – but we can help you deploy, customize, and leverage them to achieve your goals.</p>
+<p>For instance, you might be able to quickly get set up with a free resource database by <a class="reference external" href="https://openreferral.org/delivering-open-referral-solutions-with-airtable/">deploying the Open Referral Airtable template</a>. You might also deploy one of the open source content management systems in our ecosystem (like <a class="reference external" href="https://sarapis.org/human-services/orservices/">ORServices</a>). We also have helped communities develop open source policies and procedures (like the DC Community Resource Information Exchange’s <a class="reference external" href="https://docs.google.com/document/d/1fGz4etL3mN7lEqqgE57XBWM1C6JRoywR/edit?usp=share_link&amp;ouid=104531125124834239733&amp;rtpof=true&amp;sd=true">style guide</a> and <a class="reference external" href="https://docs.google.com/document/d/1xMWIPtcfmNDkuYLztT5xdSKzZteZW8CV5M7qiYcyeYI/edit#heading=h.pfttcs9har0v">verification process</a> documents) which you are free to copy and adapt.</p>
+<p>If you’re interested in deploying or helping to develop such tools, we want to hear from you! Please reach out to our network via our <a class="reference external" href="https://forum.openreferral.org/">Community Forum</a> or <a class="reference external" href="https://openreferral.org/get-involved/join-our-slack-team/">Slack channel</a>  to discuss.</p>
+</section>
+<section id="who-has-adapted-this-project-and-can-i-see-examples">
+<h2>Who has adapted this project and can I see examples?<a class="headerlink" href="#who-has-adapted-this-project-and-can-i-see-examples" title="Permalink to this headline"></a></h2>
+<p>We have <a class="reference external" href="https://openreferral.org/about/projects/">a network of projects around the United States, Canada, and beyond</a>. <a class="reference external" href="http://kumu.io/Bloom/open-referral-network-map">See this network map here</a>.</p>
+<p>Some domain-specific groups have adapted our data specification to their context, such as <a class="reference external" href="https://openreferral.org/introducing-the-humanitarian-service-data-model/">the Human Services Data Model</a> (in the field of Humanitarian Crisis Response).</p>
+</section>
+<section id="who-do-i-contact-if-i-need-help-with-this-project">
+<h2>Who do I contact if I need help with this project?<a class="headerlink" href="#who-do-i-contact-if-i-need-help-with-this-project" title="Permalink to this headline"></a></h2>
+<p>You can contact Greg Bloom (<a class="reference external" href="https://github.com/greggish">&#64;greggish</a> | <a class="reference external" href="mailto:bloom&#37;&#52;&#48;openreferral&#46;org">bloom<span>&#64;</span>openreferral<span>&#46;</span>org</a>), the founder and lead organizer of Open Referral. Alternatively, you can reach out to our network via our <a class="reference external" href="https://forum.openreferral.org/">Community Forum</a> or <a class="reference external" href="https://openreferral.org/get-involved/join-our-slack-team/">Slack channel</a>.</p>
+</section>
+<section id="what-languages-is-this-project-in">
+<h2>What languages is this project in?<a class="headerlink" href="#what-languages-is-this-project-in" title="Permalink to this headline"></a></h2>
+<p>Currently Open Referral is in English, though we would welcome opportunities to support language localisation.</p>
+<p>Oh, do you mean machine language? Our data specification calls is expressed in JSON schema, though we also support for a datapackage of CSV files. Our primary reference implementation, <a class="reference external" href="https://sarapis.org/human-services/orservices/">ORServices</a>, is in Laravel.</p>
+</section>
+<section id="is-the-project-in-active-development">
+<h2>Is the project in active development?<a class="headerlink" href="#is-the-project-in-active-development" title="Permalink to this headline"></a></h2>
+<p>The Human Services Data Specification under the interim leadership of the <a class="reference external" href="https://opendataservices.coop">Open Data Services Co-operative</a>. We conducted a major upgrade cycle in 2022-23; minor upgrades may be in progress. <a class="reference external" href="https://github.com/openreferral/specification/issues">Check out our issues queue</a>.</p>
+<p>We are seeking sponsorship to support long-term institutional development of Open Referral and our data specification. Please reach out to <a class="reference external" href="mailto:info&#37;&#52;&#48;openreferral&#46;org">info<span>&#64;</span>openreferral<span>&#46;</span>org</a> for more information.</p>
+</section>
+<section id="what-is-the-licensing-on-this-project">
+<h2>What is the licensing on this project?<a class="headerlink" href="#what-is-the-licensing-on-this-project" title="Permalink to this headline"></a></h2>
+<p><a class="reference external" href="https://github.com/openreferral/specification/blob/3.0/LICENSE">Human Services Data Specification v3.0 is now available</a> as <a class="reference external" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</p>
+</section>
+<section id="notes">
+<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../design_principles/" class="btn btn-neutral float-left" title="Design Principles" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../credits/" class="btn btn-neutral float-right" title="Credits" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Open Referral.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+     
+    <a href="../privacy-notice/">Privacy Notice</a>.
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+<script async defer src="https://hypothes.is/embed.js"></script>
+
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//mon.opendataservices.coop/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '16']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Piwik Code -->
+<style>
+  /* Sidebar header (and topbar for mobile) */
+  .wy-side-nav-search, .wy-nav-top {
+    background: #f2f2f2;
+  }
+  /* Sidebar */
+  .wy-nav-side {
+    background: #f2f2f2;
+  }
+
+  /* unvisited link */
+a:link {
+  color: #1C926D;
+}
+
+/* visited link */
+a:visited {
+  color: #1C926D;
+}
+
+/* mouse over link */
+a:hover {
+  color: #d0cece;
+}
+  
+</style>
+
+
+</body>
+</html>

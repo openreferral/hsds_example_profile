@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>&lt;no title&gt; &mdash; Open Referral Data Specifications 3.0.1 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" type="text/css" />
+      <link rel="stylesheet" href="https://media.readthedocs.org/css/sphinx_rtd_theme.css" type="text/css" />
+      <link rel="stylesheet" href="https://media.readthedocs.org/css/readthedocs-doc-embed.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/jsonschema.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/renderjson.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/design-tabs.js"></script>
+        <script src="../../_static/custom.js"></script>
+        <script src="../../_static/renderjson.js"></script>
+        <script src="../../_static/json-example-format.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            Open Referral Data Specifications
+          </a>
+              <div class="version">
+                3.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Human Services Data Spec</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../hsds/about/">About HSDS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hsds/schema_reference/">Schema Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hsds/api_reference/">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hsds/publication_formats_reference/">Publication Formats Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hsds/logical_model/">Logical Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hsds/variations_interoperability/">Variations &amp; Interoperability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hsds/uk_compliance/">UK Compliance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hsds/changelog/">Changelog</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">HSDS Implementation Guidance</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../hsds/use_cases/">Use Cases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hsds/names_and_descriptions/">Names and Descriptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hsds/schedules/">Schedules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hsds/classifications/">Classifications, Attributes &amp; Taxonomies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hsds/identifiers/">Identifiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hsds/producing_sharing/">Publication Guidance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hsds/extending/">Extending HSDS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Open Referral Initiative</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../initiative/">Project Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../design_principles/">Design Principles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../credits/">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../privacy-notice/">Privacy Notice</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Open Referral Data Specifications</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">&lt;no title&gt;</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/profiles/existing-profiles.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Open Referral.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+     
+    <a href="../../privacy-notice/">Privacy Notice</a>.
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+<script async defer src="https://hypothes.is/embed.js"></script>
+
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//mon.opendataservices.coop/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '16']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Piwik Code -->
+<style>
+  /* Sidebar header (and topbar for mobile) */
+  .wy-side-nav-search, .wy-nav-top {
+    background: #f2f2f2;
+  }
+  /* Sidebar */
+  .wy-nav-side {
+    background: #f2f2f2;
+  }
+
+  /* unvisited link */
+a:link {
+  color: #1C926D;
+}
+
+/* visited link */
+a:visited {
+  color: #1C926D;
+}
+
+/* mouse over link */
+a:hover {
+  color: #d0cece;
+}
+  
+</style>
+
+
+</body>
+</html>

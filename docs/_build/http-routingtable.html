@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTTP Routing Table &mdash; Open Referral Data Specifications 3.0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" type="text/css" />
+      <link rel="stylesheet" href="https://media.readthedocs.org/css/sphinx_rtd_theme.css" type="text/css" />
+      <link rel="stylesheet" href="https://media.readthedocs.org/css/readthedocs-doc-embed.css" type="text/css" />
+      <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="_static/jsonschema.css" type="text/css" />
+      <link rel="stylesheet" href="_static/renderjson.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/design-tabs.js"></script>
+        <script src="_static/custom.js"></script>
+        <script src="_static/renderjson.js"></script>
+        <script src="_static/json-example-format.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+ 
+
+    <script>
+      DOCUMENTATION_OPTIONS.COLLAPSE_INDEX = true;
+    </script>
+
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Open Referral Data Specifications
+          </a>
+              <div class="version">
+                3.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Human Services Data Spec</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="hsds/about.html">About HSDS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hsds/schema_reference.html">Schema Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hsds/api_reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hsds/publication_formats_reference.html">Publication Formats Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hsds/logical_model.html">Logical Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hsds/variations_interoperability.html">Variations &amp; Interoperability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hsds/uk_compliance.html">UK Compliance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hsds/changelog.html">Changelog</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">HSDS Implementation Guidance</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="hsds/use_cases.html">Use Cases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hsds/names_and_descriptions.html">Names and Descriptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hsds/schedules.html">Schedules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hsds/classifications.html">Classifications, Attributes &amp; Taxonomies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hsds/identifiers.html">Identifiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hsds/producing_sharing.html">Publication Guidance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hsds/extending.html">Extending HSDS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Open Referral Initiative</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="initiative/index.html">Project Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design_principles.html">Design Principles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="credits.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="privacy-notice.html">Privacy Notice</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Open Referral Data Specifications</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">HTTP Routing Table</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+
+   <h1>HTTP Routing Table</h1>
+
+   <div class="modindex-jumpbox">
+   <a href="#cap-/"><strong>/</strong></a> | 
+   <a href="#cap-/organizations"><strong>/organizations</strong></a> | 
+   <a href="#cap-/service_at_locations"><strong>/service_at_locations</strong></a> | 
+   <a href="#cap-/services"><strong>/services</strong></a> | 
+   <a href="#cap-/taxonomies"><strong>/taxonomies</strong></a> | 
+   <a href="#cap-/taxonomy_terms"><strong>/taxonomy_terms</strong></a>
+   </div>
+
+   <table class="indextable modindextable">
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-/"><td></td><td>
+       <strong>/</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="hsds/api_reference.html#get--"><code class="xref">GET /</code></a></td><td>
+       <em>Retrieve information about this API and its relationship with HSDS.</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-/organizations"><td></td><td>
+       <strong>/organizations</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="hsds/api_reference.html#get--organizations"><code class="xref">GET /organizations</code></a></td><td>
+       <em>Paginated list of basic Organization information</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="hsds/api_reference.html#get--organizations-id"><code class="xref">GET /organizations/{id}</code></a></td><td>
+       <em>Fully nested organization with service array that contains simple information which could only contain the service.id.</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-/service_at_locations"><td></td><td>
+       <strong>/service_at_locations</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="hsds/api_reference.html#get--service_at_locations"><code class="xref">GET /service_at_locations</code></a></td><td>
+       <em>Retrieve paginated listings of service_at_location that only have one-to-one fields in them.</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="hsds/api_reference.html#get--service_at_locations-id"><code class="xref">GET /service_at_locations/{id}</code></a></td><td>
+       <em>Retrieve fully nested service_at_location with all related data with specified id.</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-/services"><td></td><td>
+       <strong>/services</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="hsds/api_reference.html#get--services"><code class="xref">GET /services</code></a></td><td>
+       <em>Retrieves paginated listings of services that only have one-to-one fields in them.</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="hsds/api_reference.html#get--services-id"><code class="xref">GET /services/{id}</code></a></td><td>
+       <em>Retrieves a fully nested service with all related data with id.</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-/taxonomies"><td></td><td>
+       <strong>/taxonomies</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="hsds/api_reference.html#get--taxonomies"><code class="xref">GET /taxonomies</code></a></td><td>
+       <em>Paginated listing of taxonomies.</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="hsds/api_reference.html#get--taxonomies-id"><code class="xref">GET /taxonomies/{id}</code></a></td><td>
+       <em>Retrieves full information on a taxonomy by {id}.</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-/taxonomy_terms"><td></td><td>
+       <strong>/taxonomy_terms</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="hsds/api_reference.html#get--taxonomy_terms"><code class="xref">GET /taxonomy_terms</code></a></td><td>
+       <em>Paginated listing of taxonomy terms</em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="hsds/api_reference.html#get--taxonomy_terms-id"><code class="xref">GET /taxonomy_terms/{id}</code></a></td><td>
+       <em>Full information on a taxonomy term.</em></td></tr>
+   </table>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Open Referral.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+     
+    <a href="privacy-notice.html">Privacy Notice</a>.
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+<script async defer src="https://hypothes.is/embed.js"></script>
+
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//mon.opendataservices.coop/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '16']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Piwik Code -->
+<style>
+  /* Sidebar header (and topbar for mobile) */
+  .wy-side-nav-search, .wy-nav-top {
+    background: #f2f2f2;
+  }
+  /* Sidebar */
+  .wy-nav-side {
+    background: #f2f2f2;
+  }
+
+  /* unvisited link */
+a:link {
+  color: #1C926D;
+}
+
+/* visited link */
+a:visited {
+  color: #1C926D;
+}
+
+/* mouse over link */
+a:hover {
+  color: #d0cece;
+}
+  
+</style>
+
+
+</body>
+</html>

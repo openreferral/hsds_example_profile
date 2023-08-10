@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Classifications, Attributes &amp; Taxonomies &mdash; Open Referral Data Specifications 3.0.1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" type="text/css" />
+      <link rel="stylesheet" href="https://media.readthedocs.org/css/sphinx_rtd_theme.css" type="text/css" />
+      <link rel="stylesheet" href="https://media.readthedocs.org/css/readthedocs-doc-embed.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/jsonschema.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/renderjson.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/design-tabs.js"></script>
+        <script src="../_static/custom.js"></script>
+        <script src="../_static/renderjson.js"></script>
+        <script src="../_static/json-example-format.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Identifiers" href="identifiers.html" />
+    <link rel="prev" title="Schedules" href="schedules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Open Referral Data Specifications
+          </a>
+              <div class="version">
+                3.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Human Services Data Spec</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="about.html">About HSDS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="schema_reference.html">Schema Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api_reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="publication_formats_reference.html">Publication Formats Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="logical_model.html">Logical Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="variations_interoperability.html">Variations &amp; Interoperability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="uk_compliance.html">UK Compliance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">HSDS Implementation Guidance</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="use_cases.html">Use Cases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="names_and_descriptions.html">Names and Descriptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="schedules.html">Schedules</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Classifications, Attributes &amp; Taxonomies</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#scope-of-hsds">Scope of HSDS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#terminology">Terminology</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#vocabulary">Vocabulary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#taxonomy">Taxonomy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#embedded-taxonomy">Embedded Taxonomy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#external-taxonomy">External Taxonomy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#taxonomy-term">Taxonomy Term</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#attribute">Attribute</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#applying-a-taxonomy-term-to-an-object">Applying a taxonomy term to an object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example">Example</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#services">services</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#taxonomy-terms">taxonomy_terms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#programs">programs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#service-attributes">service_attributes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#other-attributes">other_attributes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="identifiers.html">Identifiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="producing_sharing.html">Publication Guidance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extending.html">Extending HSDS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Open Referral Initiative</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../initiative/index.html">Project Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../design_principles.html">Design Principles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../credits.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../privacy-notice.html">Privacy Notice</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Open Referral Data Specifications</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Classifications, Attributes &amp; Taxonomies</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/hsds/classifications.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="classifications-attributes-taxonomies">
+<h1>Classifications, Attributes &amp; Taxonomies<a class="headerlink" href="#classifications-attributes-taxonomies" title="Permalink to this headline"></a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This page is <em>non-normative</em>, which means that it doesn’t form part of the standard; if there is any ambiguity, the standard takes precedence. This page may be updated at any time in response to community demand.</p>
+</div>
+<p>HSDS allows any major entity to have attributes attached. These attributes can be either properties of the entity, or classifications of the entity.</p>
+<p>For <em>services</em>, the <em>service_taxonomy</em> table is used for this.</p>
+<p>For all other entities, the <em>link_taxonomy</em> table is used.</p>
+<section id="scope-of-hsds">
+<h2>Scope of HSDS<a class="headerlink" href="#scope-of-hsds" title="Permalink to this headline"></a></h2>
+<p>HSDS is focused on providing information about services; it is not designed to be a taxonomy interchange format. Therefore, the features provided by HSDS are intended to be sufficient for users to transfer enough information about a taxonomy to make the data about services be useful, but no more.</p>
+<p>If, in a particular context, it’s helpful to transfer more information than HSDS has in scope, then HSDS is extensible, and you’re welcome to add additional information beyond the schema.</p>
+</section>
+<section id="terminology">
+<h2>Terminology<a class="headerlink" href="#terminology" title="Permalink to this headline"></a></h2>
+<p>Classification and description is an area in which terms are used inconsistently across domains and applications. Therefore, we define here certain terms which are used in the standard.</p>
+<p>These definitions may be different from those that you’d use in your context, in which case we’d suggest prepending the term “OpenReferral” or “HSDS” to disambiguate. For example, if you’d call an “attribute” a “property”, then you might refer to an “HSDS Attribute”.</p>
+<section id="vocabulary">
+<h3>Vocabulary<a class="headerlink" href="#vocabulary" title="Permalink to this headline"></a></h3>
+<p>A <em>vocabulary</em> is the set of words that are used in a language, which may have multiple meanings.</p>
+<p>For example, the English language has around 170,000 terms in its vocabulary. The word “crane” can refer to a piece of machinery, a type of bird, or the action of overextending one’s neck in an attempt to see something that is otherwise obscured.</p>
+<p>Alternatively a vocabulary of codes might be created for a particular purpose - such as “ES1098” and “87HG42”</p>
+</section>
+<section id="taxonomy">
+<h3>Taxonomy<a class="headerlink" href="#taxonomy" title="Permalink to this headline"></a></h3>
+<p>A <em>taxonomy</em> is a structure of terms drawn from a vocabulary which can be used to describe attributes of something.</p>
+<p>For example, a taxonomy designed for use in the construction industry, called “construction machinery” might say that a particular piece of machinery is a “crane”, or an “86HG4”</p>
+<p>In such a case, to say that a particular machine is a “construction machinery”-&gt;”crane” is meaningful.</p>
+</section>
+<section id="embedded-taxonomy">
+<h3>Embedded Taxonomy<a class="headerlink" href="#embedded-taxonomy" title="Permalink to this headline"></a></h3>
+<p>An <em>embedded taxonomy</em> is a taxonomy where the dataset contains the definition of the taxonomy terms used in the data; ie, to find out what a term means, you look within the dataset. It can be a clone of an external taxonomy, if licensing allows.</p>
+<p>Data packages using HSDS shouldn’t contain any unused taxonomy terms, in particular if providing those terms would result in a package that comprises more taxonomy data than service data.</p>
+</section>
+<section id="external-taxonomy">
+<h3>External Taxonomy<a class="headerlink" href="#external-taxonomy" title="Permalink to this headline"></a></h3>
+<p>An <em>external taxonomy</em> is where the taxonomy is held outside of the data and  the dataset ships with just references to the taxonomy; ie, to find out authoritatively what a term means, you look elsewhere.</p>
+</section>
+<section id="taxonomy-term">
+<h3>Taxonomy Term<a class="headerlink" href="#taxonomy-term" title="Permalink to this headline"></a></h3>
+<p>A <em>taxonomy term</em> is a particular instance of a term from a vocabulary which is given a particular meaning by a taxonomy.</p>
+<p>For example, a taxonomy term might be “86HG4”, which the taxonomy describes as lifting equipment. It might be a child of “ES1098”, which is heavy machinery.</p>
+</section>
+<section id="attribute">
+<h3>Attribute<a class="headerlink" href="#attribute" title="Permalink to this headline"></a></h3>
+<p>An <em>attribute</em> is some property, fact, or assertion that is made of a thing.</p>
+<p>For example, a particular piece of machinery might have some attributes:</p>
+<ul class="simple">
+<li><p>Painted yellow</p></li>
+<li><p>Has a government-issued plate declaring it to be ID “JG36QAK” and allowed to be driven on public roads</p></li>
+<li><p>Is of type “crane”, from the taxonomy “construction machinery”</p></li>
+</ul>
+<p>Attributes in HSDS are asserted by applying a taxonomy term to an object.</p>
+</section>
+</section>
+<section id="applying-a-taxonomy-term-to-an-object">
+<h2>Applying a taxonomy term to an object<a class="headerlink" href="#applying-a-taxonomy-term-to-an-object" title="Permalink to this headline"></a></h2>
+<p>To apply a taxonomy term to an object, three things are required:</p>
+<ul class="simple">
+<li><p>An entry in the taxonomy term table, containing the term</p></li>
+<li><p>An entry in the relevant table, containing the entity</p></li>
+<li><p>An entry in the relevant link table, linking the two</p></li>
+</ul>
+</section>
+<section id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline"></a></h2>
+<p>(Note: only fields required for the example are shown)</p>
+<section id="services">
+<h3>services<a class="headerlink" href="#services" title="Permalink to this headline"></a></h3>
+<p>First of all, some services.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 33%" />
+<col style="width: 49%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>id</p></td>
+<td><p>name</p></td>
+<td><p>description</p></td>
+</tr>
+<tr class="row-even"><td><p>89652</p></td>
+<td><p>Kitten Time</p></td>
+<td><p>Time with kittens</p></td>
+</tr>
+<tr class="row-odd"><td><p>89654</p></td>
+<td><p>Puppy Time</p></td>
+<td><p>Time with puppies</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="taxonomy-terms">
+<h3>taxonomy_terms<a class="headerlink" href="#taxonomy-terms" title="Permalink to this headline"></a></h3>
+<p>Then, some taxonomy terms.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 16%" />
+<col style="width: 45%" />
+<col style="width: 32%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>id</p></td>
+<td><p>term</p></td>
+<td><p>description</p></td>
+<td><p>taxonomy</p></td>
+</tr>
+<tr class="row-even"><td><p>918</p></td>
+<td><p>stress</p></td>
+<td><p>A service that helps with stress</p></td>
+<td><p><a class="reference external" href="http://taxonomy.example/">http://taxonomy.example/</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>1045</p></td>
+<td><p>WORKPLACE</p></td>
+<td><p>Services that help in the workplace</p></td>
+<td><p>My Local Taxonomy</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="programs">
+<h3>programs<a class="headerlink" href="#programs" title="Permalink to this headline"></a></h3>
+<p>And finally, a program.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 45%" />
+<col style="width: 55%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>id</p></td>
+<td><p>name</p></td>
+</tr>
+<tr class="row-even"><td><p>2767-ANIMAL-THERAPY</p></td>
+<td><p>Animal Therapy Programme</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="service-attributes">
+<h3>service_attributes<a class="headerlink" href="#service-attributes" title="Permalink to this headline"></a></h3>
+<p>We then use the service_attributes table to link the services with the appropriate taxonomy terms.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 35%" />
+<col style="width: 53%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>id</p></td>
+<td><p>service_id</p></td>
+<td><p>taxonomy_term_id</p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>89652</p></td>
+<td><p>918</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>89652</p></td>
+<td><p>1045</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>89654</p></td>
+<td><p>918</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>89654</p></td>
+<td><p>1045</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="other-attributes">
+<h3>other_attributes<a class="headerlink" href="#other-attributes" title="Permalink to this headline"></a></h3>
+<p>And finally, we use the other_attributes table to link the program with the appropriate taxonomy term.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 21%" />
+<col style="width: 26%" />
+<col style="width: 43%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>id</p></td>
+<td><p>link_id</p></td>
+<td><p>link_type</p></td>
+<td><p>taxonomy_term_id</p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>89652</p></td>
+<td><p>program</p></td>
+<td><p>918</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>89654</p></td>
+<td><p>program</p></td>
+<td><p>918</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="schedules.html" class="btn btn-neutral float-left" title="Schedules" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="identifiers.html" class="btn btn-neutral float-right" title="Identifiers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Open Referral.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+     
+    <a href="../privacy-notice.html">Privacy Notice</a>.
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+<script async defer src="https://hypothes.is/embed.js"></script>
+
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//mon.opendataservices.coop/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '16']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Piwik Code -->
+<style>
+  /* Sidebar header (and topbar for mobile) */
+  .wy-side-nav-search, .wy-nav-top {
+    background: #f2f2f2;
+  }
+  /* Sidebar */
+  .wy-nav-side {
+    background: #f2f2f2;
+  }
+
+  /* unvisited link */
+a:link {
+  color: #1C926D;
+}
+
+/* visited link */
+a:visited {
+  color: #1C926D;
+}
+
+/* mouse over link */
+a:hover {
+  color: #d0cece;
+}
+  
+</style>
+
+
+</body>
+</html>

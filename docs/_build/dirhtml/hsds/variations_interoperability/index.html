@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profiles, Variations, and Interoperability &mdash; Open Referral Data Specifications 3.0.1 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" type="text/css" />
+      <link rel="stylesheet" href="https://media.readthedocs.org/css/sphinx_rtd_theme.css" type="text/css" />
+      <link rel="stylesheet" href="https://media.readthedocs.org/css/readthedocs-doc-embed.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/jsonschema.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/renderjson.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/design-tabs.js"></script>
+        <script src="../../_static/custom.js"></script>
+        <script src="../../_static/renderjson.js"></script>
+        <script src="../../_static/json-example-format.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="Logical Model" href="../logical_model/" />
+    <link rel="prev" title="Publication Formats Reference" href="../publication_formats_reference/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            Open Referral Data Specifications
+          </a>
+              <div class="version">
+                3.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Human Services Data Spec</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../about/">About HSDS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../schema_reference/">Schema Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api_reference/">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publication_formats_reference/">Publication Formats Reference</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Profiles, Variations, and Interoperability</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#hsds-profiles">HSDS Profiles</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#publish-data-using-an-existing-hsds-profile">Publish data using an existing HSDS Profile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#developing-a-new-profile">Developing a new Profile</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#tables-to-fields-transformation">Tables-to-fields Transformation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../logical_model/">Logical Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uk_compliance/">UK Compliance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog/">Changelog</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">HSDS Implementation Guidance</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../use_cases/">Use Cases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../names_and_descriptions/">Names and Descriptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../schedules/">Schedules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../classifications/">Classifications, Attributes &amp; Taxonomies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../identifiers/">Identifiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../producing_sharing/">Publication Guidance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extending/">Extending HSDS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Open Referral Initiative</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../initiative/">Project Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../design_principles/">Design Principles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../credits/">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../privacy-notice/">Privacy Notice</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Open Referral Data Specifications</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Profiles, Variations, and Interoperability</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/hsds/variations_interoperability.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="profiles-variations-and-interoperability">
+<h1>Profiles, Variations, and Interoperability<a class="headerlink" href="#profiles-variations-and-interoperability" title="Permalink to this headline"></a></h1>
+<p>As an international standard, HSDS provides a common core of defintions and objects for describing health, human, and social services as well as their locations and the organizations which provide them. This allows HSDS to acommodate a wide range of applications and provide value to people for a variety of use-cases.</p>
+<p>Being an international standard, however, means that the needs of HSDS publishers and users are often different depending on their exact content. Describing services, locations, and organizations effectively may differ slightly between geographic, legal, or other human contexts.</p>
+<p>To this end, the standard makes several provisions for making HSDS as effective as is reasonably possible for a given context. The first of these is the <em>HSDS Profiles</em> mechanism, by which people can collaboratively build upon HSDS as a base to provide a profile more tailored for their requirements. The latter of these is the flexibility for publishing data using a slightly simplified structure in some cases.</p>
+<section id="hsds-profiles">
+<h2>HSDS Profiles<a class="headerlink" href="#hsds-profiles" title="Permalink to this headline"></a></h2>
+<p>The HSDS Profiles mechanism provides a method of building upon and adjusting the core HSDS Schema in order to tailor it for specific contexts which may require different or additional validation rules.</p>
+<p>Profiles may declare new optional or mandatory fields, make existing optional fields mandatory, introduce new validation rules or new structures, or declare new API endpoints in addition to those on the <a class="reference internal" href="../api_reference/"><span class="doc std std-doc">HSDS API Reference</span></a>.</p>
+<p>Conversely, Profiles may also remove or override some parts of the HSDS Schema which are not relevant to them. This will not prevent a publisher from publishing data in accordance to the structures of HSDS, but it may not be validated by tooling as it is technically additional data from the perspective of the Profile.</p>
+<p>Profiles may also recommend the use of particular taxonomies to ensure greater levels of interoperability between datasets using the Profile.</p>
+<p>Profiles are generally developed and maintained by third parties to satisfy particular requirements for their context. These could arise from a community need, legal structures, taxonomy requirements, or other affordances of service provision specific to that context. In general, Profiles should provide robust documentation allowing a publisher or data user to understand its rules and structures both independantly and in comparison to the core HSDS schema.</p>
+<p>It should be noted that while Profiles may be used to extend the functionality of HSDS, they should not be used to create modular or re-usable “Extensions”. The Profiles mechanism differs to that of an Extensions mechanism in other standards and as such a dataset may only implement a <em>single</em> Profile.</p>
+<section id="publish-data-using-an-existing-hsds-profile">
+<h3>Publish data using an existing HSDS Profile<a class="headerlink" href="#publish-data-using-an-existing-hsds-profile" title="Permalink to this headline"></a></h3>
+<p>You are encouraged to use existing profiles to publish HSDS data when suitable. This is a very straightforward process.</p>
+<ol class="arabic simple">
+<li><p><strong>Ensure that you have implemented the Profile-specific requirements.</strong> You should check the requirements of the Profile that you are publishing against and ensure that your data conforms to these. Do you have all the minumum required fields? Are all of your fields in the correct format?</p></li>
+<li><p><strong>Declare that you are using the Profile via your API output.</strong> The <a class="reference internal" href="../api_reference/#endpoint-details"><span class="std std-doc"><code class="docutils literal notranslate"><span class="pre">/</span></code> endpoint</span></a> of the HSDS API Reference includes a response key/value pair for <code class="docutils literal notranslate"><span class="pre">profile</span></code>. You should populate this with the URI to the profile you are using. Profile documentation should clearly state this value to avoid confusion – if you are unsure which value to use please get in touch with the implementer of the profile.</p></li>
+</ol>
+<p>Existing Profiles that are likely of interest:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../uk_compliance/"><span class="doc std std-doc">UK Profile</span></a></p></li>
+</ul>
+</section>
+<section id="developing-a-new-profile">
+<h3>Developing a new Profile<a class="headerlink" href="#developing-a-new-profile" title="Permalink to this headline"></a></h3>
+<p>If the core HSDS standard or an existing Profile does not adequately meet the needs of your context, you may wish to develop a new Profile to provide the standardization and meaning that you and other publishers in your context will need to produce good quality HSDS data.</p>
+<p>Creating a new HSDS Profile is an involved but straightforward process:</p>
+<ol class="arabic simple">
+<li><p><strong>Engage and Discuss</strong> with the community about which problems you’re trying to solve and how best to address them. This may include people in the <a class="reference external" href="https://forum.openreferral.org/">wider HSDS community</a> and other implementors in your context who may want to contribute directly to your profile. Speaking to people who have implemented other HSDS Profiles may help you with thinking through some aspects of Profiles.</p></li>
+<li><p><strong>Develop and Document</strong> the Profile. All new Profile should use the <a class="reference external" href="https://github.com/openreferral/hsds_example_profile">Example Profile repository</a> as a starting point because it contains all of the tools required to generate your final Profile schemas as well as a basic documentation site. The Example Profile contains technical guidance and examples on creating a profile inside its README file. You may want to expand upon the basic documentation generated by the tools in the repository.</p></li>
+<li><p><strong>Share and Support</strong> your new Profile! Make an announcement on the <a class="reference external" href="https://forum.openreferral.org/">HSDS forums</a> and start producing data conforming to your Profile. If others are using your Profile, you may want to collaborate with them to plan changes to the Profile or answer questions by expanding your documentation.</p></li>
+</ol>
+</section>
+</section>
+<section id="tables-to-fields-transformation">
+<h2>Tables-to-fields Transformation<a class="headerlink" href="#tables-to-fields-transformation" title="Permalink to this headline"></a></h2>
+<p>certain adaptations of the schema are permitted within the standard. and this results in interoperability considerations that must be considered when making design decisions for a particular system.</p>
+<p>If there is a situation where there is at most a 1:1 relationship in a particular system between items in two tables, where those items would be linked by IDs, then it is permitted within the standard for those tables to be merged. Column names should be retained.</p>
+<p>If the system in question is part of a wider ecosystem, then the community around that ecosystem should agree on a common approach to interoperability around HSDS. For example - agreeing on a common set of tables, or agreeing that standard HSDS should be available for interchange purposes.</p>
+<p>For example, if all ‘service’ entries have at most one fee entry, then you can just add a ‘fee’ column to the ‘service’ table.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../publication_formats_reference/" class="btn btn-neutral float-left" title="Publication Formats Reference" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../logical_model/" class="btn btn-neutral float-right" title="Logical Model" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Open Referral.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+     
+    <a href="../../privacy-notice/">Privacy Notice</a>.
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+<script async defer src="https://hypothes.is/embed.js"></script>
+
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//mon.opendataservices.coop/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '16']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Piwik Code -->
+<style>
+  /* Sidebar header (and topbar for mobile) */
+  .wy-side-nav-search, .wy-nav-top {
+    background: #f2f2f2;
+  }
+  /* Sidebar */
+  .wy-nav-side {
+    background: #f2f2f2;
+  }
+
+  /* unvisited link */
+a:link {
+  color: #1C926D;
+}
+
+/* visited link */
+a:visited {
+  color: #1C926D;
+}
+
+/* mouse over link */
+a:hover {
+  color: #d0cece;
+}
+  
+</style>
+
+
+</body>
+</html>
