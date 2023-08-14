@@ -147,6 +147,6 @@ If you wish to generate your reference tables using the compiled schemas availab
 
 ## Objects and fields
 
-If you run `python/generate_schema_reference_page.py`, then this section will contain a reference table for each schema file in your Profile. The script is very naïve, and will insert each reference table in whatever order it reads the files from &ndash; you likely want to change this!
+If you run `python/generate_schema_reference_page.py`, then this section will contain a reference table for each schema file in your Profile. The script is very naïve, and will insert each reference table in whatever order it reads the files from &ndash; you likely want to change the order once you've run the script!
 
 {{insert_schema_reference_tables}}

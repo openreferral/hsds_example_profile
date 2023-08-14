@@ -15,7 +15,7 @@ Contents:
 
    schema_reference
    api_reference
-   logical_model
+   erd
 
 ```
 
