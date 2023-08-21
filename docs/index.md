@@ -16,6 +16,8 @@ Contents:
    schema_reference
    api_reference
    erd
+   profile_compliance
+   changelog
 
 ```
 

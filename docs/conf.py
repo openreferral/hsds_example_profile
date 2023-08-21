@@ -53,7 +53,7 @@ source_suffix = ['.rst', '.md']
 master_doc = 'index'
 
 # General information about the project.
-project = 'Open Referral Data Specifications'
+project = 'HSDS Example Profile'
 copyright = 'Open Referral'
 author = 'Open Referral'
 
