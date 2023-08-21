@@ -90,15 +90,21 @@ After you're done, you should prepare some documentation for your Profile and of
 To develop your HSDS Profile you will need to be working in a specific folder, so it is worthwhile taking a quick look at the structure of this repository:
 
 ```
+├─ docs/ (A directory containing a Sphinxdoc configuration and some pages to get you started on creating documentation for your Profile. You SHOULD edit this folder manually)
 ├─ examples/ (A directory containing automatically generated examples. You should NOT edit this folder manually.)
 ├─ profile/ (The directory containing all of the changes representing your Profile. You MUST be editing files here manually.)
+├─ python/ (A directory containing some Python tooling which supports generating documentation from your Profile)
 ├─ schema/ (A directory containing automatically generated schemas created by combining your changes in the profile directory with the HSDS Schema files. You should NOT edit this folder manually.)
+├─ .readthedocs.yaml (A configuration file for a Read The Docs build to support you hosting the documentation on Read The Docs. You MAY edit this to customise your Read The Docs build.)
 ├─ LICENSE (The license file for this repository. The contents of the template repository are licensed by the Creative Commons Attribution Share-Alike 4.0 license. You may license your additional documentation under a different license.)
 ├─ README.md (This readme file! You SHOULD edit it manually once you're done with your profile, and change it to suit your needs.)
-├─ datapackage.json (An automatically generated datapackage file which will allow people to publish data using your profile in a tabular format. You should NOT edit or remove this file.)
+├─ core_tables.csv (A file which labels HSDS schemas as core or not. This is used to generate the ERD in the documentation, so you should NOT remove the file but you MAY edit it to define which tables are core for your Profile.)
+├─ datapackage.json (An automatically generated datapackage file which will allow people to publish data using your profile in a tabular format. You should NOT edit or remove this file because it also allows the documentation tools to generate the ERD diagrams.)
 ```
 
 As you can see, most of your work will be inside the `profile` directory. Most of the rest is generated and handled by the HSDS Schema tools, which you installed during the setup.
+
+If you are producing documentation for your Profile, then you will also be doing some work inside of the `docs` directory.
 
 ### A note on the underlying technologies
 
@@ -110,6 +116,8 @@ Specific versions:
 
 * HSDS 3.0 is implemented in [JSON Schema Draft 2020-12](http://json-schema.org/specification-links.html#2020-12). This was the latest version available during implementation. You do not need to declare a JSON Schema version in your Profile schema files, but you should take care not to use features that are only available in later versions of JSON Schema and be careful when using features that have a different behaviour in previous versions.
 * The HSDS OpenAPI specification file is implemented in [OpenAPI version 3.1.0](https://spec.openapis.org/oas/latest.html), which was the latest version available during implementation. You should therefore ensure that any features you add to your Profile's `openapi.json` file are available in this version.
+
+The documentation tools are based on [sphinx-doc](https://www.sphinx-doc.org/en/master/), with a default configuration compatible with [Read The Docs](https://about.readthedocs.com/). You should be at least nominally familiar with these tools if you want to get the most out of the documentation tools. If you want to use alternative tooling to generate and host documentation (e.g. Github/Gitlab pages, Hugo, Jekyll, etc.) then you can do so, but may need to generate some components separately.
 
 ### Defining changes
 
@@ -201,22 +209,176 @@ This will run the JSON Merge Patch to produce the schemas under the `schema` dir
 
 ### Preparing documentation
 
-At present, producing documentation is a manual affair. We are working on integrating tools which will support you by generating some basic documentation for your Profile via [Sphinx](https://www.sphinx-doc.org/en/master/), which is compatible with [Readthedocs](https://readthedocs.org/).
+This section contains some guidance on how to create documentation for your Profile.
 
-Until the tooling is ready you can either document your Profile inside this README file or create your own documentation site by creating a `docs` directory and generating documentation within that.
+This repository contains some tooling which will generate a simple documentation site template for you, using [sphinx-doc](https://www.sphinx-doc.org/en/master/). This is also configured to be compatible with [Read The Docs](https://about.readthedocs.com/). This simple site is really designed to get you started, and we intend that you make changes to the default pages.
 
-We recommend that HSDS Profile documentation should contain at least the following:
+You are not limited to the documentation tools provided here, if you prefer other documentation hosting services or documentation-generation tools.
 
-* An overview of the Profile, its intended use-cases and audience or who may find useful
-* A schema reference page containing details of each schema. This should stand on its own ie containing information about the full Profile schema once it has been merged with the HSDS Schema, not just your changes
-* An API reference page with a similar scope to the above. If your Profile does not make changes to the existing HSDS API Specification, then you should explicitly state this and link to the [HSDS API Reference](http://docs.openreferral.org/en/latest/hsds/api_reference.html) as the SSOT.
-* A summary of changes which your Profile makes. This can be structured however best suits your Profile and audience, but you should be clear and explicit with regards to:
+#### What to include in Profile documentation
+
+Regardless of whether you use this repository's documentation tools or not, a good HSDS Profiles documentation site will include the following things:
+
+* **An overview** of the Profile explaining its intended use-cases and audience, and whoever else may find it useful.
+* **A Schema Reference Page** analogous to the [HSDS Schema Reference page](https://docs.openreferral.org/en/latest/hsds/schema_reference.html). This should be self-contained and not rely on any linking out to the core HSDS docs or other Profile docs. Essentially, it should contain the entire schema reference for your Profile and not just the changes you've made. We recommend providing the reference in a tabular format. You should also consider 
+* **An API Reference Page** analogous to the [HSDS API Reference page](https://docs.openreferral.org/en/latest/hsds/api_reference.html). Again, this should be self-contained and provide a thorough reference for the entire API specification in you Profile. You may want to simply generate and provide a [SwaggerUI](https://swagger.io/tools/swagger-ui/) page for this purpose, and link to this from your other documentation. Alternatively, you can generate your own API Reference Page.
+* **A summary of changes** which your Profile makes to HSDS. While the Schema Reference page provides a self-contained reference page for your Profile, the summary of changes simply lists what your Profile changes from core HSDS. The motivation for this is to support data users and implementors coming from core HSDS. Providing a list or summary of these changes will make it easier for them to get started with your Profile. You should include:
   * new properties in your Profile which are not in HSDS
   * properties which your Profile removes from HSDS
   * new validation rules which your Profile adds, which are not in HSDS
   * validation rules from HSDS which your Profile removes
   * new API endpoints which are enforced by your Profile
   * any properties in HSDS which your Profile renames
+
+#### Using the included documentation tools
+
+As noted throughout this README, this repository provides some tools that will support you generating and maintaining documentation for your Profile. This section contains guidance on how to use the tools.
+
+The documentation tools provide the following features:
+
+* Sphinx-doc documentation site compatible with Read The Docs.
+  * Styled for visual consistency with the HSDS documentation.
+* Generates a Schema Reference page for your Profile including tabular representations of your Profile schemas.
+* Generates an API Reference page for your Profile, based on your Profile's OpenAPI file.
+* Generates Entity Relationship Diagrams for your Profile, with a documentation page containing them.
+* Provides template pages with in-line guidance and suggestions for how to achieve advances effects.
+
+The basic workflow of generating the documentation is as follows:
+
+1. Edit your Profile by defining changes in the `profile/` directory, and/or write your documentation inside `docs/` directory.
+2. Ensure that you've generated your Profile schemas using the HSDS Schema Tools.
+3. Build your documentation locally either to check it, or for hosting elsewhere
+4. (Optional) push your changes to a repository readable by [Read The Docs](https://about.readthedocs.com/features/), w
+
+This assumes that you have done everything required in previous steps to set up the environment. If you have not done so, please go back and do this.
+
+In general, building docs is easy and takes only a few commands. First, you will need to ensure that the Python Virtual Environment is active:
+
+```
+source .ve/bin/active
+```
+
+If you've edited your Profile schemas at all, you'll need to run the HSDS Tools to generate or update the `schema/` directory alongside `datapackage.json`.
+
+```
+hsds_schema.py profile-all https://github.com/example-org/my-awesome-hsds-profile --clean
+```
+
+You can now generate the docs locally with the following commands: 
+
+```
+cd docs/
+make dirhtml
+```
+
+This will generate your docs site in `docs/_build/dirhtml`. You can use this to either inspect the docs locally, or take the generated files and host them yourself.
+
+Alternatively, if you're using Read The Docs, you can commit and push your changes after running the HSDS Tools and then Read The Docs will build your documentation for you.
+
+This guidance continues by describing nuances of using the documentation tools.
+
+##### The `docs/` directory
+
+The `docs/` directory contains most of the files needed to generate your documentation.
+
+* `conf.py` is the main Sphinx doc configuration file and it is run every time you build your docs. The file contains the settings for setting the documentation title, as well as containing the code used to generate the ERD every time you build the docs.
+* `_static/` and `_templates/` contain some custom HTML, CSS, and Javascript files used in the documentation theme. `assets/` contains other assets such as images etc.
+* `extras` is a folder used as a target to generate Swagger UI files and the ERD images.
+
+There are also some Makefiles (`make.bat` and `Makefiles`) to be compatible with build tools.
+
+The remainder of the files are markdown files, where each file represents a page of your documentation.
+
+The following default pages are set up for you:
+
+* `index.md` is the landing page. You can write additional introduction copy here, and this is where you'll define what appears in the table of contents / sidebar.
+* `schema_reference.md` provides the Schema Reference Page. By default it contains some in-line documentation to generate nice tabular representations of schemas, and a token for a script used to auto-generate some basic references tables.
+* `api_reference.md` provides an automatically generated API reference page. By default it contains some in-line documentation on creating more advanced effects.
+* `erd.md` provides a page containing the Entity Relationship Diagrams. By default it contains a brief introduction addressing you, which you should remove.
+* `profile_compliance.md` provides a skeleton page designed for you to populate with details of how your Profile differs from the core HSDS.
+* `changelog.md` provides a skeleton page designed for you to populate with changelog details of your Profile as it changes and grows.
+
+We intend that you edit each of these pages to remove the default copy and tailor it to the needs of your Profile.
+
+##### Automatically generating tabular representations of your Profile schemas
+
+If you look at the default `docs/schema_reference.md` file, you'll notice that it contains `{{insert_schema_reference_tables}}` at the bottom.
+
+Unlike the API Reference, which is generated via a single `openapi.json` file, the Schema Reference page will need to account for multiple different schema files in the `schema/` folder. Since your Profile may remove schemas from HSDS, this would mean that sphinx-doc would throw errors when trying to read schema files which don't exist. Alternatively, your Profile may *add* new schemas, and then the Schema Reference Page would not take these into account.
+
+Therefore, we have included a script designed to get you started. It is really only designed to be run once to provide you with a base from which to work:
+
+```
+cd python/
+./generate_schema_reference_page.py
+```
+
+This will look inside your `schema/` folder and for each schema present, will build a very basic sphinx directive adding a reference table for this schema. It will then open `docs/schema_reference.md` and replace the `{{insert_schema_reference_tables}}` token with the list of sphinx directives.
+
+After running this, you may want to re-order the directives inside `docs/schema_reference.md` to make them appear in a more prioritised order. You can then also follow the tutorials to achieve more advanced effects.
+
+##### Generating the API Reference
+
+Generating the API reference is handled automatically, and depends on `schema/openapi.json` being generated by the HSDS schema tools.
+
+The SwaggerUI version of the API Reference depends on an older version of OpenAPI (3.0, as opposed to 3.1). In the HSDS docs, the HSDS schema tools generate an OpenAPI 3.0, de-referenced, version of `schema/openapi.json` named `openapi30.json` and places it in a specific folder.
+
+This feature is yet to be integrated into the Profiles documentation tooling, since it requires a target directory to place the generated file. We are seeking to integrate this soon.
+
+##### Generating the ERDs
+
+The ERDs are generated each time you build the documentation, via libraries that are stored in the repository `python/` directory, and then used in `docs/conf.py`.
+
+The ERDs depend on `datapackage.json` to read the datapackage version of the schema, and `core_tables.csv` to recognise which ones are 'core' tables and thus change the colour of the element in the ERD.
+
+##### Adding your own pages
+
+You can add your own pages. Just create a markdown file where the filename represents the URL path you want for that page. For example, `taxonomy-and-classifications.md` will become `https://your-docs-site.org/en/latest/taxonomy-and-classifications`.
+
+You can then add the page to the sidebar (referred to as the TOC tree), by editing `docs/index.md`:
+
+``````
+```{eval-rst}
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Reference
+
+   schema_reference
+   api_reference
+   erd
+   profile_compliance
+   taxonomy-and-classifications  <--- your new file
+   changelog
+
+```
+``````
+
+You don't need to include the page in the TOC tree, but Sphinxdoc will warn you when it's building.
+
+You can also rearrange the files into folders if your Profile documentation expands. For example the HSDS docs uses the following folder structure:
+
+```
+hsds/
+  schema_reference.md
+  api_reference.md
+  etc.
+initiative
+  index.md
+```
+
+#### Using alternative documentation tools
+
+You may not want to use the included documentation tooling, and there is nothing preventing you from using other tools such as a static site generator or another dedicated documentation tool.
+
+If you do this, you will likely want to remove the documentation tools which are integrated into this repository:
+
+* remove the contents of the `docs` directory. You may keep or remove the directory itself, depending on the workflow of the tools you're going to set up.
+* remove the `.readthedocs.yaml` file, or edit it to describe a build using an alternative toolkit compatible with Read The Docs.
+* remove the `python/generate_schema_reference_page.py` script, as this is designed for use with sphinx-doc.
+* edit `requirements.txt` to remove references to packages designed for sphinx. These should be clearly labelled. Make sure you do not remove the hsds-schema-tools requirements!
+
+You're then free to start integrating your own documentation tools.
 
 ## Worked Examples
 
