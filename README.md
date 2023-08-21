@@ -247,8 +247,8 @@ The basic workflow of generating the documentation is as follows:
 
 1. Edit your Profile by defining changes in the `profile/` directory, and/or write your documentation inside `docs/` directory.
 2. Ensure that you've generated your Profile schemas using the HSDS Schema Tools.
-3. Build your documentation locally either to check it, or for hosting elsewhere
-4. (Optional) push your changes to a repository readable by [Read The Docs](https://about.readthedocs.com/features/), w
+3. Build your documentation locally either to check it, or for hosting elsewhere.
+4. (Optional) push your changes to a repository readable by [Read The Docs](https://about.readthedocs.com/features/).
 
 This assumes that you have done everything required in previous steps to set up the environment. If you have not done so, please go back and do this.
 
