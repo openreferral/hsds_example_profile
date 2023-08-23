@@ -1,0 +1,16 @@
+/* override table width restrictions */
+.wy-table-responsive table td, .wy-table-responsive table th {
+    white-space: normal !important;
+}
+
+.wy-table-responsive {
+    margin-bottom: 24px;
+    max-width: 100%;
+    overflow: visible !important;
+}
+
+/* To fit the ERD's on HSDS/Logical Model page properly. It's the same content as the theme does for img's. */
+.rst-content svg {
+    max-width: 100%;
+    height: auto;
+}
