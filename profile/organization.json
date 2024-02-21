@@ -1,0 +1,19 @@
+{
+  "properties": {
+    "id": {
+      "type": "number",
+      "format": null,
+      "example": "1234"
+    },
+    "alternate_name": null,
+    "tax_status": null,
+    "tax_id": null,
+    "year_incorporated": null,
+    "legal_status": null,
+    "uri": null,
+    "parent_organization_id": null,
+    "funding": null,
+    "programs": null,
+    "organization_identifiers": null
+  }
+}

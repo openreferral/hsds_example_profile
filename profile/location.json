@@ -1,0 +1,29 @@
+{
+  "properties": {
+    "id": {
+      "type": "number",
+      "format": null,
+      "example": "1234"
+    },
+    "location_type": {
+      "const": "postal",
+      "description": "The type of location, which can only be postal for now.",
+      "example": null,
+      "enum": null
+    },
+    "organization_id": {
+      "type": "number",
+      "format": null,
+      "example": "1234"
+    },
+    "alternate_name": null,
+    "transportation": null,
+    "external_identifier": null,
+    "external_identifier_type": null
+  },
+  "required": [
+    "id",
+    "location_type",
+    "name"
+  ]
+}

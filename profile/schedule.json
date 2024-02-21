@@ -1,0 +1,45 @@
+{
+  "properties": {
+    "id": {
+      "format": null,
+      "example": "location-1234-permanent"
+    },
+    "service_id": {
+      "format": null
+    },
+    "location_id": {
+      "type": "number",
+      "format": null,
+      "example": "1234"
+    },
+    "service_at_location_id": null,
+    "dtstart": null,
+    "until": null,
+    "count": null,
+    "freq": {
+      "type": null,
+      "const": "WEEKLY",
+      "enum": null
+    },
+    "interval": null,
+    "byweekno": null,
+    "bymonthday": null,
+    "byyearday": null,
+    "description": null,
+    "schedule_link": null,
+    "attending_type": null,
+    "notes": null,
+    "attributes": {
+      "name": "attributes",
+      "type": "array",
+      "title": "Attributes",
+      "description": "A link between a service and one or more classifications that describe the nature of the service provided.",
+      "items": {
+        "$ref": "attribute.json"
+      }
+    }
+  },
+  "required": [
+    "id"
+  ]
+}

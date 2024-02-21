@@ -1,9 +1,36 @@
 {
-   "properties": {
-     "fees": null,
-     "fees_description": null
-   },
-   "allOf": [
-     {"required": ["url"]} 
-   ]
+  "properties": {
+    "id": {
+      "format": null
+    },
+    "organization_id": null,
+    "location_id": {
+      "name": "location_id",
+      "type": "number",
+      "title": "Location Identifier",
+      "description": "The identifier of the location where this service operates.",
+      "constraints": {
+        "unique": false
+      },
+      "example": "1234"
+    },
+    "program_id": null,
+    "alternate_name": null,
+    "url": null,
+    "email": null,
+    "interpretation_services": null,
+    "application_process": null,
+    "wait_time": null,
+    "accreditations": null,
+    "eligibility_description": null,
+    "licenses": null,
+    "alert": null,
+    "phones": null,
+    "service_areas": null,
+    "languages": null,
+    "funding": null,
+    "program": null,
+    "contacts": null,
+    "cost_options": null
+  }
 }

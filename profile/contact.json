@@ -1,0 +1,24 @@
+{
+  "properties": {
+    "organization_id": {
+      "type": "number",
+      "format": null,
+      "example": "1234"
+    },
+    "service_id": null,
+    "service_at_location_id": null,
+    "location_id": {
+      "type": "number",
+      "format": null,
+      "example": "1234"
+    },
+    "department": null,
+    "attributes": null
+  },
+  "required": [
+    "id",
+    "name",
+    "email",
+    "organization_id"
+  ]
+}

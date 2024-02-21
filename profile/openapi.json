@@ -1,9 +1,9 @@
 {
   "info": {
-    "title": "HSDS OpenAPI Demo Profile",
+    "title": "HSDS OpenAPI Soliguide Profile",
     "version": "3.0",
-    "description": "Demo Profile" ,
-    "contact": null,
+    "description": "Soliguide Profile" ,
+    "contact": "tech@solinum.org",
     "summary": null,
     "license": {
       "name": "Creative Commons Attribution Share-Alike 4.0 license",

@@ -1,0 +1,32 @@
+{
+  "properties": {
+    "id": null,
+    "location_id": {
+      "name": "location_id",
+      "type": "number",
+      "constraints": {
+        "unique": true
+      },
+      "example": "1234"
+    },
+    "description": null,
+    "details": null,
+    "url": null,
+    "accessible": {
+      "name": "accessible",
+      "type": "boolean",
+      "title": "Accessible",
+      "description": "True if the address is accessible to person with reduced mobility",
+      "constraints": {
+        "unique": false
+      },
+      "example": "true"
+    },
+    "attributes": null
+  },
+  "required": [
+    "id",
+    "location_id",
+    "accessible"
+  ]
+}

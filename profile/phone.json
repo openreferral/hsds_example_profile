@@ -1,0 +1,12 @@
+{
+  "properties": {
+    "id": {
+      "format": null
+    },
+    "extension": null,
+    "type": null,
+    "languages": null,
+    "attributes": null,
+    "service_at_location_id": null
+  }
+}

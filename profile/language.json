@@ -1,0 +1,21 @@
+{
+  "properties": {
+    "id": {
+      "format": null,
+      "example": "location-name-fr"
+    },
+    "service_id": null,
+    "location_id": {
+      "type": "number",
+      "format": null,
+      "example": "1234"
+    },
+    "phone_id": null,
+    "note": null,
+    "attributes": null
+  },
+  "required": [
+    "id",
+    "location_id"
+  ]
+}

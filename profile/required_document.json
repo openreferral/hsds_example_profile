@@ -1,0 +1,15 @@
+{
+  "properties": {
+    "id": {
+      "format": null
+    },
+    "service_id": {
+      "format": null
+    },
+    "attributes": null
+  },
+  "required": [
+    "id",
+    "service_id"
+  ]
+}
